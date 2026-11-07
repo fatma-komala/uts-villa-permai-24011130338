@@ -415,3 +415,10 @@ select {
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+#kontak {
+    scroll-margin-top: 90px;
+}
