@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website pemesanan Villa Permai di kawasan Puncak Bogor.">
+    <title>Villa Permai | Pemesanan Villa</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="navbar__logo">Villa Permai</a>
+            <div class="navbar__links">
+                <a href="#beranda">Beranda</a>
+                <a href="#daftar-villa">Daftar Villa</a>
+                <a href="#pemesanan">Pemesanan</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="beranda">
+            <div class="hero__content">
+                <p class="hero__subtitle">LIBURAN NYAMAN DI PUNCAK BOGOR</p>
+                <h1>Selamat Datang di Villa Permai</h1>
+                <p>
+                    Nikmati suasana liburan yang nyaman dan menyenangkan
+                    bersama keluarga di Villa Permai.
+                </p>
+                <a href="#daftar-villa" class="button button--primary">
+                    Lihat Villa
+                </a>
+            </div>
+        </section>
+
+        <section class="villa-section" id="daftar-villa">
+            <div class="section-heading">
+                <p class="section-heading__subtitle">PILIHAN PENGINAPAN</p>
+                <h2>Daftar Villa Kami</h2>
+                <p>Pilih villa yang sesuai dengan kebutuhan liburan Anda.</p>
+            </div>
+
+            <div class="search-box">
+                <input
+                    type="search"
+                    id="cariVilla"
+                    placeholder="Cari nama atau fasilitas villa..."
+                    aria-label="Cari villa"
+                >
+            </div>
+
+            <div class="villa-list" id="daftarVilla">
+                <!-- Kartu villa ditampilkan melalui JavaScript -->
+            </div>
+        </section>
+
+        <section class="booking-section" id="pemesanan">
+            <div class="section-heading">
+                <p class="section-heading__subtitle">RESERVASI</p>
+                <h2>Formulir Pemesanan Villa</h2>
+                <p>Isi data berikut untuk menghitung biaya pemesanan.</p>
+            </div>
+
+            <div class="booking-container">
+                <form id="formPemesanan" class="booking-form">
+
+                    <div class="form-group">
+                        <label for="namaTamu">Nama Tamu</label>
+                        <input
+                            type="text"
+                            id="namaTamu"
+                            placeholder="Masukkan nama lengkap"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkIn">Tanggal Check-in</label>
+                        <input type="date" id="checkIn" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkOut">Tanggal Check-out</label>
+                        <input type="date" id="checkOut" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jumlahTamu">Jumlah Tamu</label>
+                        <input
+                            type="number"
+                            id="jumlahTamu"
+                            min="1"
+                            max="10"
+                            value="1"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pilihanVilla">Pilih Unit Villa</label>
+                        <select id="pilihanVilla" required>
+                            <option value="">Pilih villa</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" id="btnCek" class="button button--secondary">
+                            Cek Ketersediaan
+                        </button>
+
+                        <button type="submit" class="button button--primary">
+                            Pesan Sekarang
+                        </button>
+                    </div>
+
+                </form>
+
+                <div class="booking-result" id="hasilPemesanan" aria-live="polite">
+                    <h3>Ringkasan Biaya</h3>
+                    <p>Silakan isi formulir untuk melihat rincian biaya pemesanan.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-section">
+            <h2>Pesanan Terakhir</h2>
+            <div id="daftarPesanan">
+                <p>Belum ada pesanan yang tersimpan.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h2>Villa Permai</h2>
+        <p>Penginapan nyaman untuk liburan keluarga di Puncak, Bogor.</p>
+        <p>Kontak Pemilik: Pak Hendra</p>
+        <p>WhatsApp: 0812-8656-8577</p>
+        <p>&copy; 2026 Villa Permai. Seluruh hak cipta dilindungi.</p>
+    </footer>
+
+</body>
+</html>
