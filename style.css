@@ -1,0 +1,417 @@
+:root {
+    --primary: #315C4B;
+    --primary-dark: #214536;
+    --sage: #789681;
+    --sage-light: #E8F0E9;
+    --cream: #F8F5ED;
+    --gold: #C69A55;
+    --gold-light: #F3E6CC;
+    --white: #FFFFFF;
+    --text: #37443C;
+    --text-light: #747D75;
+    --border: #E4E7DF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+.header {
+    background-color: #426B55;
+    padding: 18px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__logo {
+    color: var(--gold-light);
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar__links {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar__links a {
+    color: var(--gold-light);
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.navbar__links a:hover {
+    color: var(--gold);
+}
+
+.hero {
+    min-height: 430px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-dark);
+    color: var(--white);
+}
+
+.hero__content {
+    max-width: 650px;
+    animation: fadeIn 0.8s ease;
+}
+
+.hero__subtitle {
+    color: var(--gold-light);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero__content p {
+    margin-bottom: 20px;
+    color: #F0F3EF;
+}
+
+.button {
+    display: inline-block;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button--primary {
+    background-color: #D8BD91;
+    color: #263C30;  
+}
+
+.button--primary:hover {
+    background-color: #C9A875;
+    transform: translateY(-3px);
+}
+
+.button--secondary {
+    background-color: #A8BDAA;
+    color: #263C30;
+}
+
+.button--secondary:hover {
+    background-color: #91AA96;
+    color: #263C30;
+    transform: translateY(-3px);
+}
+
+.villa-section,
+.booking-section,
+.order-section {
+    padding: 65px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading__subtitle {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.section-heading h2,
+.order-section h2 {
+    color: var(--primary-dark);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.search-box {
+    max-width: 550px;
+    margin: 0 auto 30px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: var(--white);
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-box input:focus {
+    border-color: var(--sage);
+    box-shadow: 0 0 0 3px rgba(120,150,129,0.15);
+}
+
+.villa-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.villa-card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 18px rgba(49,92,75,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.villa-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(49,92,75,0.15);
+}
+
+.villa-card h3 {
+    color: var(--primary);
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.villa-card p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--text-light);
+}
+
+.villa-card__price {
+    color: var(--gold) !important;
+    font-size: 19px !important;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.villa-card__facilities {
+    margin-top: 10px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.villa-card__status {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background-color: var(--sage-light);
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.booking-section {
+    background-color: var(--sage-light);
+}
+
+.booking-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.booking-form,
+.booking-result {
+    background-color: var(--white);
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(49,92,75,0.07);
+}
+
+.booking-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #FCFCFA;
+    color: var(--text);
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--sage);
+    box-shadow: 0 0 0 3px rgba(120,150,129,0.13);
+}
+
+.form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.booking-result {
+    width: 100%;
+    border-left: 5px solid var(--gold);
+    background-color: #FFFCF5;
+}
+
+.booking-result h3 {
+    color: var(--primary);
+    margin-bottom: 18px;
+}
+
+.booking-result p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.order-section {
+    background-color: var(--cream);
+}
+
+.order-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#daftarPesanan {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(49,92,75,0.06);
+}
+
+.footer {
+    background: linear-gradient(
+        120deg,
+        #214536,
+        #315C4B
+    );
+    color: var(--white);
+    text-align: center;
+    padding: 40px 8%;
+    border-top: 4px solid var(--gold);
+}
+
+.footer h2 {
+    color: var(--gold-light);
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.footer p {
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #E5EDE6;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .hero {
+        padding: 65px 5%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .villa-section,
+    .booking-section,
+    .order-section {
+        padding: 50px 5%;
+    }
+
+    .villa-list {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-container {
+        flex-direction: column;
+    }
+
+    .booking-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
