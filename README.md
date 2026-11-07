@@ -1,4 +1,3 @@
-
 # VILLA PERMAI – APLIKASI PEMESANAN VILLA BERBASIS WEB
 
 ## Identitas Mahasiswa
@@ -47,7 +46,7 @@ Website ini dibuat menggunakan HTML, CSS, dan JavaScript tanpa menggunakan back-
 ## Struktur Folder
 
 ```text
-uts-villa-permai/
+uts-villa-permai-24011130338/
 │
 ├── index.html
 ├── style.css
@@ -55,13 +54,13 @@ uts-villa-permai/
 ├── README.md
 ├── .gitignore
 └── screenshot/
-    └── halaman-villa.png
+    └── halaman-villa.jpeg
 ```
 
 ## Cara Menjalankan Website
 
 1. Download atau clone repository ini.
-2. Buka folder `uts-villa-permai`.
+2. Buka folder `uts-villa-permai-24011130338`.
 3. Buka file `index.html` menggunakan browser.
 4. Website Villa Permai dapat langsung digunakan tanpa instalasi aplikasi tambahan.
 
@@ -69,7 +68,7 @@ uts-villa-permai/
 
 Screenshot halaman website Villa Permai:
 
-![Screenshot Villa Permai](screenshot/halaman-villa.png)
+![Screenshot Villa Permai](screenshot/halaman-villa.jpeg)
 
 ## Repository GitHub
 
